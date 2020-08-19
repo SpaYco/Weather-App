@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: 350ms;
+    background: linear-gradient(to right, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+
+    main {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+
+        #input,
+        #info-card-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+        }
+
+        #input {
+            input[type='text'] {
+                width: 40vw;
+                height: 3vw;
+                border: 2px solid white;
+                background-color: transparent;
+                font-size: 3vw;
+                color: white;
+                outline-color: white;
+                transition: 350ms;
+
+                &:focus {
+                    box-shadow: 0 0 15px 3px white;
+                }
+            }
+
+            input[type='submit'] {
+                background-color: transparent;
+                color: white;
+                font-size: 1vw;
+                text-transform: uppercase;
+                border: 2px solid white;
+                width: 4vw;
+                height: 3vw;
+                margin-left: 15px;
+                border-radius: 0;
+                cursor: pointer;
+                outline-color: transparent;
+            }
+
+        }
+        #info-card-section {
+            #info-card {
+                width: 40vw;
+                height: 70vh;
+                border: 2px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}
