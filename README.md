@@ -2,7 +2,7 @@
 
 > a responsive Weather App that display the weather and more information by city name.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Built With
 
