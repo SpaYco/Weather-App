@@ -6,6 +6,20 @@
     font-family: 'Do Hyeon', sans-serif;
 }
 
+@keyframes light {
+    0% {
+        box-shadow: 0 0 15px 1px white;
+    }
+
+    50% {
+        box-shadow: 0 0 15px 5px white;
+    }
+
+    10% {
+        box-shadow: 0 0 15px 1px white;
+    }
+}
+
 body {
     display: flex;
     align-items: center;
@@ -46,9 +60,11 @@ body {
                 transition: 350ms;
 
                 &:focus {
-                    box-shadow: 0 0  15px 7px white;
                     background-color: white;
                     color: #e84393;
+                    animation-name: light;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
                 }
             }
 
@@ -66,23 +82,35 @@ body {
                 cursor: pointer;
                 outline-color: transparent;
                 transition: 350ms;
+
                 &:hover {
                     background-color: white;
                     color: #e84393;
+                    animation-name: light;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
 
                 }
             }
 
         }
+
         #info-card-section {
             #info-card {
                 width: 40vw;
                 height: 70vh;
-                border: 2px solid white;
+                background-color: transparent;
+                box-shadow: 0 0 15px 1px white;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+
+                &:hover {
+                    animation-name: light;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
+                }
             }
         }
     }

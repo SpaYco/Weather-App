@@ -12,3 +12,5 @@ document.getElementById('type').addEventListener('click', () => {
 });
 
 document.getElementById('btn').addEventListener('click', weather);
+
+weather();
