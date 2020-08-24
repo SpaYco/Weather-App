@@ -156,35 +156,41 @@ body {
   }
 }
 
-@media all and (max-width: 1024px){
-body {
+@media all and (max-width: 1024px) {
+  body {
     main {
-        flex-direction: column;
-        #input {
-            #location {
-                height: 10vw;
-                width: 63vw;
-                font-size: 5vw;
-                &::placeholder {
-                    font-size: 4vw;
-                }
-            }
-            input[type='submit']{
-                height: 10vw;
-                font-size: 4vw;
-                &:nth-child(3) {
-                    width: 13vw;
-                }
-            }
+      flex-direction: column;
+
+      #input {
+        #location {
+          height: 10vw;
+          width: 63vw;
+          font-size: 5vw;
+
+          &::placeholder {
+            font-size: 4vw;
+          }
         }
-        #info-card-section {
-            padding-bottom: 50px;
-            #info-card {
-                width: 90vw;
-                height: 70h;
-                font-size: 4vw;
-            }
+
+        input[type='submit'] {
+          height: 10vw;
+          font-size: 4vw;
+
+          &:nth-child(3) {
+            width: 13vw;
+          }
         }
+      }
+
+      #info-card-section {
+        padding-bottom: 50px;
+
+        #info-card {
+          width: 90vw;
+          height: 70vh;
+          font-size: 4vw;
+        }
+      }
     }
-}
+  }
 }
