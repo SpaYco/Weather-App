@@ -2,7 +2,7 @@ export default async function weather() {
   const userInput = document.getElementById('location').value;
   let input = '';
   if (userInput === '') {
-    input = 'London';
+    input = 'Tunisia';
   } else {
     input = userInput;
   }
