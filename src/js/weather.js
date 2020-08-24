@@ -29,7 +29,7 @@ export default async function weather() {
     }
     document.getElementById('humidity').innerHTML = weatherObject.main.humidity;
 
-    const conditionGifApi = await fetch(`https://api.giphy.com/v1/stickers/search?api_key=7DOBtFE3PDUY88lbr92uY85Agd1c5YbD&limit=1&q=${weatherObject.weather[0].main}`);
+    const conditionGifApi = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=7DOBtFE3PDUY88lbr92uY85Agd1c5YbD&limit=1&q=${weatherObject.weather[0].main}`);
     const conditionGif = await conditionGifApi.json();
     document.getElementById('condition').src = conditionGif.data[0].images.original.url;
   } catch (msg) {
