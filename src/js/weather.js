@@ -7,7 +7,7 @@ export default async function weather() {
     } else {
       input = userInput;
     }
-    const currentWeather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=c0746535836a6d4327cd5fcea2ff7593`);
+    const currentWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=c0746535836a6d4327cd5fcea2ff7593`);
     const weatherObject = await currentWeather.json();
     document.getElementById('name').innerHTML = weatherObject.name;
     if (document.getElementById('type').value === 'C') {
@@ -29,7 +29,7 @@ export default async function weather() {
     }
     document.getElementById('humidity').innerHTML = weatherObject.main.humidity;
 
-    const conditionGifApi = await fetch(`http://api.giphy.com/v1/stickers/search?api_key=7DOBtFE3PDUY88lbr92uY85Agd1c5YbD&limit=1&q=${weatherObject.weather[0].main}`);
+    const conditionGifApi = await fetch(`https://api.giphy.com/v1/stickers/search?api_key=7DOBtFE3PDUY88lbr92uY85Agd1c5YbD&limit=1&q=${weatherObject.weather[0].main}`);
     const conditionGif = await conditionGifApi.json();
     document.getElementById('condition').src = conditionGif.data[0].images.original.url;
   } catch (msg) {
