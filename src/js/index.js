@@ -1,4 +1,5 @@
 import weather from './weather';
+// eslint-disable-next-line no-unused-vars
 import main from '../css/main.scss';
 
 document.getElementById('type').addEventListener('click', () => {
