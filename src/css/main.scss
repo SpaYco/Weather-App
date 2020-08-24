@@ -1,156 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Do Hyeon', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Do Hyeon', sans-serif;
 }
 
 @keyframes light {
-    0% {
-        box-shadow: 0 0 15px 1px white;
-    }
+  0% {
+    box-shadow: 0 0 15px 1px white;
+  }
 
-    50% {
-        box-shadow: 0 0 15px 5px white;
-    }
+  50% {
+    box-shadow: 0 0 15px 5px white;
+  }
 
-    10% {
-        box-shadow: 0 0 15px 1px white;
-    }
+  10% {
+    box-shadow: 0 0 15px 1px white;
+  }
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: 350ms;
+  background: linear-gradient(to right, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+
+  main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 100vw;
-    transition: 350ms;
-    background: linear-gradient(to right, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+    height: 100vh;
 
-    main {
+    #input,
+    #info-card-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      flex: 1;
+    }
 
+    #input {
+      input[type='text'] {
+        width: 75%;
+        height: 3vw;
+        border: 1px solid transparent;
+        background-color: transparent;
+        box-shadow: 0 0 15px 1px white;
+        font-size: 3vw;
+        color: white;
+        outline: none;
+        transition: 350ms;
+
+        &::placeholder {
+          color: white;
+          opacity: 0.7;
+          font-size: 2.5vw;
+        }
+
+        &:focus {
+          background-color: white;
+          color: #e84393;
+          animation-name: light;
+          animation-iteration-count: infinite;
+          animation-duration: 1s;
+        }
+      }
+
+      input[type='submit'] {
+        background-color: transparent;
+        color: white;
+        font-size: 1vw;
+        text-transform: uppercase;
+        border: 2px solid transparent;
+        box-shadow: 0 0 15px 1px white;
+        width: 9%;
+        height: 3vw;
+        margin-left: 15px;
+        border-radius: 0;
+        cursor: pointer;
+        outline-color: transparent;
+        transition: 350ms;
+
+        &:hover {
+          background-color: white;
+          color: #e84393;
+          animation-name: light;
+          animation-iteration-count: infinite;
+          animation-duration: 1s;
+        }
+      }
+    }
+
+    #info-card-section {
+      #info-card {
+        width: 40vw;
+        height: 70vh;
+        background-color: transparent;
+        box-shadow: 0 0 15px 1px white;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 100vh;
+        flex-direction: column;
+        position: relative;
+        font-size: 2vw;
+        color: white;
+        text-shadow: 0 0 2px black;
 
-        #input,
-        #info-card-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
+        .data-container {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0);
+          transition: 350ms;
+          cursor: pointer;
+
+          &:not(:first-child) {
+            border-top: 1px solid white;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.329);
+          }
+
+          * {
             flex: 1;
+            text-align: center;
+          }
         }
 
-        #input {
-            input[type='text'] {
-                width: 75%;
-                height: 3vw;
-                border: 1px solid transparent;
-                background-color: transparent;
-                box-shadow: 0 0 15px 1px white;
-                font-size: 3vw;
-                color: white;
-                outline: none;
-                transition: 350ms;
-
-                &::placeholder {
-                    color: white;
-                    opacity: 0.7; 
-                    font-size: 2.5vw;
-                  }
-                
-                &:focus {
-                    background-color: white;
-                    color: #e84393;
-                    animation-name: light;
-                    animation-iteration-count: infinite;
-                    animation-duration: 1s;
-                }
-            }
-
-            input[type='submit'] {
-                background-color: transparent;
-                color: white;
-                font-size: 1vw;
-                text-transform: uppercase;
-                border: 2px solid transparent;
-                box-shadow: 0 0 15px 1px white;
-                width: 9%;
-                height: 3vw;
-                margin-left: 15px;
-                border-radius: 0;
-                cursor: pointer;
-                outline-color: transparent;
-                transition: 350ms;
-
-                &:hover {
-                    background-color: white;
-                    color: #e84393;
-                    animation-name: light;
-                    animation-iteration-count: infinite;
-                    animation-duration: 1s;
-
-                }
-            }
-
+        #condition {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
         }
 
-        #info-card-section {
-            #info-card {
-                width: 40vw;
-                height: 70vh;
-                background-color: transparent;
-                box-shadow: 0 0 15px 1px white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                position: relative;
-                font-size: 2vw;
-                color: white;
-                text-shadow: 0px 0px 2px black;
-                .data-container {
-                    flex: 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    background-color: rgba(255, 255, 255, 0);
-                    transition: 350ms;
-                    cursor: pointer;
-                    &:not(:first-child){
-                        border-top: 1px solid white;
-                    }
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.329);
-                    }
-                    * {
-                        flex: 1;
-                        text-align: center;
-                    }
-                }
-
-                #condition {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                }
-
-                &:hover {
-                    animation-name: light;
-                    animation-iteration-count: infinite;
-                    animation-duration: 1s;
-                }
-            }
+        &:hover {
+          animation-name: light;
+          animation-iteration-count: infinite;
+          animation-duration: 1s;
         }
+      }
     }
+  }
 }
