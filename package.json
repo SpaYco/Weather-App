@@ -44,7 +44,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "materialize-css": "^1.0.0-rc.2"
-  }
+  "dependencies": {}
 }
